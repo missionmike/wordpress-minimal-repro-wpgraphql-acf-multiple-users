@@ -5,9 +5,8 @@
 # Enable debug mode (-x)
 set -eux
 
-# Set working directory to start.
-workspace_basedir=/workspaces/wordpress-boilerplate
-cd $workspace_basedir
+# This env value is set in devcontainer.json
+cd $WORKSPACE_FOLDER
 
 # Load environment variables.
 export $(grep -v '^#' settings.env | xargs)
@@ -53,4 +52,4 @@ do
     else
         wp plugin install "$plugin_name" --version="$version" --activate
     fi
-done < $workspace_basedir/plugins.txt
+done < $WORKSPACE_FOLDER/plugins.txt
