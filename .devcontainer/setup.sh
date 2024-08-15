@@ -53,3 +53,6 @@ do
         wp plugin install "$plugin_name" --version="$version" --activate
     fi
 done < $WORKSPACE_FOLDER/plugins.txt
+
+# Activate "Test Theme"
+wp theme activate test-theme

@@ -1,5 +1,5 @@
 <?php
 /**
- * Empty theme.
+ * Test theme.
  */
  
