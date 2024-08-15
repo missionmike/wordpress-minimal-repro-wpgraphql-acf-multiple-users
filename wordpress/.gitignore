@@ -1,7 +1,11 @@
-# Ignore everything
-*
+wp-content/plugins
+wp-content/themes/twentytwentyfour
+wp-content/themes/twentytwentythree
+wp-content/themes/twentytwentytwo
+/*.php
+/license.txt
+/readme.html
 
-# Except this file.
-!.gitignore
-
-# Optional: keep specific theme or plugin files.
+wp-admin
+wp-includes
+uploads
