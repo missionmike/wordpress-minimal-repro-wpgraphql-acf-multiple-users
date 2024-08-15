@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# Except this file.
+!.gitignore
+
+# Optional: keep specific theme or plugin files.

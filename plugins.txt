@@ -1,0 +1,12 @@
+# Format for installig the latest version:
+# plugin-slug=latest
+
+# Format for installing specific version:
+# plugin-slug=1.2.3
+
+# Example list (uncomment to test):
+# advanced-custom-fields=latest
+# wp-graphql=latest
+# wpgraphql-acf=latest
+
+# Ensure to keep a newline at the end of this file, or the last plugin will not install.

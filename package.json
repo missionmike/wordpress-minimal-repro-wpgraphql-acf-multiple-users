@@ -1,0 +1,8 @@
+{
+	"name": "WordPress Boilerplate",
+	"version": "1.0.0",
+	"description": "Use to scaffold a WordPress installation for minimal reproduction of issues.",
+	"devDependencies": {
+		"@wordpress/prettier-config": "4.0.1"
+	}
+}
