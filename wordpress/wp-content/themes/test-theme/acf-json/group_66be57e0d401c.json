@@ -18,7 +18,7 @@
             },
             "role": "",
             "return_format": "array",
-            "multiple": 1,
+            "multiple": 0,
             "allow_null": 0,
             "bidirectional": 0,
             "show_in_graphql": 1,
@@ -49,5 +49,5 @@
     "graphql_field_name": "customUsers",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1723751603
+    "modified": 1723752606
 }
