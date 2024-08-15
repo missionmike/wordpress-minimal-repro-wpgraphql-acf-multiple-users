@@ -1,25 +1,11 @@
-# WordPress Minimal Reproduction Boilerplate
-
-Base WordPress VS Code Dev Container used to scaffold minimal reproductions for troubleshooting
-issues.
-
-The `.devcontainer` folder and contents is based on the
-[official WordPress repo](https://github.com/WordPress/wordpress-develop/tree/trunk/.devcontainer).
-
-The purpose of this repo is to be forked, then modified to scaffold a minimal reproduction for
-specific plugin(s) or themes.
+# WordPress Minimal Reproduction for ACF Users Issue
 
 ## Setup Instructions
 
-### Basic Defaults
+### Setup Dev container
 
-1. Reopen the repository in a dev container.
-
-### Modified
-
-2. Edit the `settings.env` file to make version adjustments.
-3. Edit the `plugins.txt` file to modify the list of installed and activated plugins.
-4. Run `sh .devcontainer/setup.sh` to reinstall WP Core and plugins with the modified settings.
+Reopen the repository in a dev container. The `.devcontainer/setup.sh` script should install the WP
+Core and plugins using versions defined in `plugins.txt` and `settings.env` files.
 
 ### Access WP Admin
 
@@ -30,3 +16,39 @@ Login with:
 
 -   Username: `admin`
 -   Password: `password`
+
+Confirm that the "Test Theme" is activated here: http://localhost:8080/wp-admin/themes.php
+
+### Confirm ACF Fields
+
+Visit the ACF Fields page to confirm that the "Custom Users" field group is available.
+
+### Add Two Test Users
+
+Visit the Users page and add two test users: http://localhost:8080/wp-admin/users.php
+
+I used "User One" and "User Two" as names. Use these two users to test with the "Hello World" post
+(post ID `1`, used in query below).
+
+### Test a Query in the GraphQL IDE or Postman
+
+Use this test query in the GraphQL IDE or Postman:
+
+```
+query NewQuery {
+  post(id: "1", idType: DATABASE_ID) {
+    databaseId
+    customUsers {
+      users {
+        edges {
+          node {
+            databaseId
+            firstName
+            lastName
+          }
+        }
+      }
+    }
+  }
+}
+```
