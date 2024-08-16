@@ -1,5 +1,7 @@
 # WordPress Minimal Reproduction for ACF Users Issue
 
+> Note: the issue this repro was diagnosing is now closed: https://github.com/wp-graphql/wpgraphql-acf/issues/234
+
 ## Setup Instructions
 
 ### Setup Dev container
